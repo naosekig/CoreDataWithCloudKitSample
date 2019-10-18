@@ -16,6 +16,9 @@
 		1467597F2359757800C0CD04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1467597D2359757800C0CD04 /* LaunchScreen.storyboard */; };
 		1467598A2359757800C0CD04 /* CoreDataWithCloudKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146759892359757800C0CD04 /* CoreDataWithCloudKitSampleTests.swift */; };
 		146759952359757800C0CD04 /* CoreDataWithCloudKitSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146759942359757800C0CD04 /* CoreDataWithCloudKitSampleUITests.swift */; };
+		146759A42359774500C0CD04 /* GoodsMaster+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146759A22359774500C0CD04 /* GoodsMaster+CoreDataClass.swift */; };
+		146759A52359774500C0CD04 /* GoodsMaster+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146759A32359774500C0CD04 /* GoodsMaster+CoreDataProperties.swift */; };
+		146759A92359775C00C0CD04 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146759A82359775C00C0CD04 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		146759902359757800C0CD04 /* CoreDataWithCloudKitSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataWithCloudKitSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146759942359757800C0CD04 /* CoreDataWithCloudKitSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWithCloudKitSampleUITests.swift; sourceTree = "<group>"; };
 		146759962359757800C0CD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146759A22359774500C0CD04 /* GoodsMaster+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoodsMaster+CoreDataClass.swift"; sourceTree = "<group>"; };
+		146759A32359774500C0CD04 /* GoodsMaster+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoodsMaster+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		146759A62359775900C0CD04 /* CoreDataWithCloudKitSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreDataWithCloudKitSample.entitlements; sourceTree = "<group>"; };
+		146759A82359775C00C0CD04 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146759A92359775C00C0CD04 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +89,13 @@
 		146759632359757500C0CD04 = {
 			isa = PBXGroup;
 			children = (
+				146759A22359774500C0CD04 /* GoodsMaster+CoreDataClass.swift */,
+				146759A32359774500C0CD04 /* GoodsMaster+CoreDataProperties.swift */,
 				1467596E2359757500C0CD04 /* CoreDataWithCloudKitSample */,
 				146759882359757800C0CD04 /* CoreDataWithCloudKitSampleTests */,
 				146759932359757800C0CD04 /* CoreDataWithCloudKitSampleUITests */,
 				1467596D2359757500C0CD04 /* Products */,
+				146759A72359775C00C0CD04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +112,7 @@
 		1467596E2359757500C0CD04 /* CoreDataWithCloudKitSample */ = {
 			isa = PBXGroup;
 			children = (
+				146759A62359775900C0CD04 /* CoreDataWithCloudKitSample.entitlements */,
 				1467596F2359757500C0CD04 /* AppDelegate.swift */,
 				146759712359757500C0CD04 /* SceneDelegate.swift */,
 				146759732359757500C0CD04 /* ViewController.swift */,
@@ -129,6 +141,14 @@
 				146759962359757800C0CD04 /* Info.plist */,
 			);
 			path = CoreDataWithCloudKitSampleUITests;
+			sourceTree = "<group>";
+		};
+		146759A72359775C00C0CD04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				146759A82359775C00C0CD04 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +284,10 @@
 			files = (
 				146759742359757500C0CD04 /* ViewController.swift in Sources */,
 				146759702359757500C0CD04 /* AppDelegate.swift in Sources */,
+				146759A52359774500C0CD04 /* GoodsMaster+CoreDataProperties.swift in Sources */,
 				146759722359757500C0CD04 /* SceneDelegate.swift in Sources */,
 				1467597A2359757500C0CD04 /* CoreDataWithCloudKitSample.xcdatamodeld in Sources */,
+				146759A42359774500C0CD04 /* GoodsMaster+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoreDataWithCloudKitSample/CoreDataWithCloudKitSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 954D5684XS;
 				INFOPLIST_FILE = CoreDataWithCloudKitSample/Info.plist;
@@ -456,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoreDataWithCloudKitSample/CoreDataWithCloudKitSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 954D5684XS;
 				INFOPLIST_FILE = CoreDataWithCloudKitSample/Info.plist;
